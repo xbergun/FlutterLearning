@@ -1,13 +1,66 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  Container containerOlustur(String harf, Color renk, {double margin = 0}) {
+    return Container(
+      color: renk,
+      height: 75,
+      width: 75,
+      alignment: Alignment.center,
+      margin: EdgeInsets.only(top: margin),
+      child: Text(
+        harf,
+        style: TextStyle(fontSize: 24),
+      ),
+    );
+  }
+
+  Row dartRowunuOlustur() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        containerOlustur("D", Colors.orange.shade200),
+        containerOlustur("A", Colors.red.shade200),
+        containerOlustur("R", Colors.yellow.shade200),
+        containerOlustur("T", Colors.blue.shade200),
+      ],
+    );
+  }
+
+  Column dartDersleriColumnOlustur() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //expanded her yeri kapladığı için boşluk bırakmaz.
+      children: [
+        Expanded(
+          child: containerOlustur("E", Colors.orange.shade300, margin: 15),
+        ),
+        Expanded(
+          child: containerOlustur("r", Colors.orange.shade300, margin: 15),
+        ),
+        Expanded(
+          child: containerOlustur("S", Colors.orange.shade300, margin: 15),
+        ),
+        Expanded(
+          child: containerOlustur("L", Colors.orange.shade300, margin: 15),
+        ),
+        Expanded(
+          child: containerOlustur("E", Colors.orange.shade300, margin: 15),
+        ),
+        Expanded(
+          child: containerOlustur("R", Colors.orange.shade300, margin: 15),
+        ),
+        Expanded(
+          child: containerOlustur("İ", Colors.orange.shade300, margin: 15),
+        ),
+      ],
+    );
+  }
+
   String _img1 =
       "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2Fyc3xlbnwwfHwwfHw%3D&w=1000&q=80";
 
@@ -21,13 +74,14 @@ class MyApp extends StatelessWidget {
         theme:
             ThemeData(primaryColor: Colors.green, accentColor: Colors.purple),
         home: Scaffold(
-            appBar: AppBar(
-              title: const Text('Selam'),
-            ),
             body: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: SorunluContainer,
+              color: Colors.red.shade100,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  dartRowunuOlustur(),
+                  Expanded(child: dartDersleriColumnOlustur()),
+                ],
               ),
             ),
             floatingActionButton: FloatingActionButton(
@@ -40,6 +94,160 @@ class MyApp extends StatelessWidget {
               ),
               backgroundColor: Colors.red,
             )));
+  }
+
+  Widget benimYaptigimOdev() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: 75,
+                  height: 75,
+                  color: Colors.yellow,
+                  child: const Text(
+                    'D',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 64,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 75,
+                  height: 75,
+                  color: Colors.yellow,
+                  child: const Text(
+                    'A',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 64,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 75,
+                  height: 75,
+                  color: Colors.yellow,
+                  child: const Text(
+                    'R',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 64,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 75,
+                  height: 75,
+                  color: Colors.yellow,
+                  child: const Text(
+                    'T',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 64,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              width: 75,
+              height: 75,
+              color: Colors.yellow,
+              child: const Text(
+                'E',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 64,
+                ),
+              ),
+            ),
+            Container(
+              width: 75,
+              height: 75,
+              color: Colors.yellow,
+              child: const Text(
+                'R',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 64,
+                ),
+              ),
+            ),
+            Container(
+              width: 75,
+              height: 75,
+              color: Colors.yellow,
+              child: const Text(
+                'S',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 64,
+                ),
+              ),
+            ),
+            Container(
+              width: 75,
+              height: 75,
+              color: Colors.yellow,
+              child: const Text(
+                'L',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 64,
+                ),
+              ),
+            ),
+            Container(
+              width: 75,
+              height: 75,
+              color: Colors.yellow,
+              child: const Text(
+                'E',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 64,
+                ),
+              ),
+            ),
+            Container(
+              width: 75,
+              height: 75,
+              color: Colors.yellow,
+              child: const Text(
+                'R',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 64,
+                ),
+              ),
+            ),
+            Container(
+              width: 75,
+              height: 75,
+              color: Colors.yellow,
+              child: const Text(
+                'İ',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 64,
+                ),
+              ),
+            ),
+          ],
+        )
+      ],
+    );
   }
 
   List<Widget> get SorunluContainer {
