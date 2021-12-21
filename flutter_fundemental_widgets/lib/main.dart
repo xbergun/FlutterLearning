@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fundemental_widgets/temel_buton_turleri.dart';
+import 'package:flutter_fundemental_widgets/popup_menu_button.dart';
+import 'dropdown_button.dart';
 
 //hot reload da sadece widgetler çalışır. Hot restartta ise baştan çalışır.
 
@@ -18,17 +19,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //uygulamanın ilk açılış sayfası home,
       title: 'My Counter App',
-      theme: ThemeData(primarySwatch: Colors.teal,
-        outlinedButtonTheme:OutlinedButtonThemeData(style: OutlinedButton.styleFrom(
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        outlinedButtonTheme: OutlinedButtonThemeData(
+            style: OutlinedButton.styleFrom(
           backgroundColor: Colors.black,
         )),
-         
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Buton Ornekleri'),
+          title: const Text('Buton Ornekleri'),
         ),
-        body: TemelButonlar(),
+        body: PopupMenuButtonKullanimi(),
       ),
     );
   }
