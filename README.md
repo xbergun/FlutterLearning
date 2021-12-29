@@ -18,3 +18,13 @@
  <img src="1.png">
 <img src="2.png">
 </div>
+<div class="row">
+ <img src="3.png">
+<img src="4.png">
+</div>
+
+<div class="row">
+ <img src="5.png">
+<img src="6.png">
+</div>
+
