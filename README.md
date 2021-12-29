@@ -5,5 +5,9 @@ Uzun basışta popup açılması eklendi.
 Buttonbari alertdialog, singlechildscrollview, Listview.separated
 
 
-<img src="1.png">
+
+
+<div class="row">
+ <img src="1.png">
 <img src="2.png">
+</div>
